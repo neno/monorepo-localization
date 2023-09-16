@@ -1,0 +1,21 @@
+{
+  "title": "Kontoeinstellungen",
+  "personalInfo": {
+    "legend": "Persönliche Daten",
+    "firstName": "Vorname",
+    "lastName": "Nachname"
+  },
+  "contact": {
+    "legend": "Kontakt",
+    "email": "Email",
+    "phone": "Telefon"
+  },
+  "address": {
+    "legend": "Addresse",
+    "street": "Straße",
+    "city": "Ort",
+    "zip": "Plz"
+  },
+  "submit": "Änderungen speichern",
+  "cancel": "Abbrechen"
+}
