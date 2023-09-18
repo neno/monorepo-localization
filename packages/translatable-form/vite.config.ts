@@ -17,9 +17,9 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'counter-increment',
+      name: 'translatable-form',
       formats: ['es'],
-      fileName: (format) => `counter-increment.${format}.js`
+      fileName: (format) => `translatable-form.${format}.js`
     },
     commonjsOptions: {
       transformMixedEsModules: true,

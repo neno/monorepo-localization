@@ -3,6 +3,8 @@ import { TranslatableFormComponent } from '../TranslatableFormComponent/Translat
 import { TranslatableFormProps } from './TranslatableForm.types';
 import { translatableFormDefaultSettings } from './TranslatableForm.settings';
 
+import './TranslatableForm.css';
+
 const getFormTitle = (
   hasEnforcedLang: boolean,
   hasCustomTranslations: boolean
@@ -39,7 +41,7 @@ export function TranslatableForm({
   const formTitle = getFormTitle(!!enforcedLang, hasCustomTranslations);
 
   return (
-    <div>
+    <div className='translatable-form'>
       <h2>{t(formTitle)}</h2>
       <dl>
         <dt>{t('enforceLanguage')}</dt>

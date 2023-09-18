@@ -3,6 +3,8 @@ import { DevTool } from '@hookform/devtools';
 import { TranslatableFormData } from './TranslatableFormComponent.types';
 import { useTranslation } from 'localization';
 
+import './TranslatableFormComponent.css';
+
 export function TranslatableFormComponent() {
   const { t } = useTranslation();
   const {
@@ -16,10 +18,14 @@ export function TranslatableFormComponent() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
+        className='translatable-form-component'
+      >
         <fieldset>
           <legend>{t('userInfo')}</legend>
-          <ol>
+          <ol className='nolist'>
             <li>
               <label>
                 <span>{t('name')}</span>

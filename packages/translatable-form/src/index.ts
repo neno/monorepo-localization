@@ -1,2 +1,2 @@
 export * from './components/TranslatableForm/TranslatableForm';
-export type { TranslatableFormData } from './components/TranslatableFormComponent/TranslatableFormComponent.types';
+export type { TranslatableFormProps } from './components/TranslatableForm/TranslatableForm.types';

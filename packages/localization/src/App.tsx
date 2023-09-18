@@ -1,6 +1,5 @@
 import { LocalizableText } from './components/LocalizableText';
 import { Stack } from './components/Stack';
-import { languageAtom } from './localization/languageStore';
 import { useAtom } from 'jotai';
 
 interface AppProps {
