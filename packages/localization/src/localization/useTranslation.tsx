@@ -5,7 +5,7 @@ export function replaceWithParams(
   text: string,
   params: Record<string, string>
 ) {
-  return text.replace(/\${([^}]+)}/g, (_, key) => params[key] || '');
+  return text.replace(/{([^}]+)}/g, (_, key) => params[key] || '');
 }
 
 export const useTranslation = () => {

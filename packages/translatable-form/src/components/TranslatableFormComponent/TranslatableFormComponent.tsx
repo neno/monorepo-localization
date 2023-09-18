@@ -59,6 +59,7 @@ export function TranslatableFormComponent() {
                     required: true,
                     pattern: /\(?\+\(?49\)?[ ()]?([- ()]?\d[- ()]?){10}/g,
                   })}
+                  placeholder='+49 12 34 56 78 90'
                   data-1p-ignore
                 />
               </label>

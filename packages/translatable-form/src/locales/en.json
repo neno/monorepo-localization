@@ -16,7 +16,7 @@
       "pattern": "Phone number must be valid"
     }
   },
-  "fullUserInfo": "${name}, email: ${email}, phone: ${phone}",
+  "fullUserInfo": "{name}, email: {email}, phone: {phone}",
   "yes": "Yes",
   "no": "No",
   "enforceLanguage": "Enforce language: ",

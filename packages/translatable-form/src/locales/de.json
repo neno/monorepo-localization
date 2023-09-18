@@ -16,7 +16,7 @@
       "pattern": "Email muss gültig sein"
     }
   },
-  "fullUserInfo": "${name}, E-Mail: ${email},  Telefon: ${phone}",
+  "fullUserInfo": "{name}, E-Mail: {email},  Telefon: {phone}",
   "yes": "Ja",
   "no": "Nein",
   "enforceLanguage": "Vordefinierter Sprache: ",
