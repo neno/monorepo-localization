@@ -11,10 +11,7 @@ export function replaceWithParams(
 export const useTranslation = () => {
   const [translationMap] = useAtom(translationMapAtom);
 
-  console.log('useTranslation', { translationMap });
-
   const translate = (key: string, params?: Record<string, string>): string => {
-    console.log('translate', { key, translationMap });
     if (!translationMap) return key;
 
     const translatedText = translationMap?.get(key);
@@ -23,7 +20,11 @@ export const useTranslation = () => {
       return replaceWithParams(translatedText, params);
     }
 
-    return translationMap?.get(key) ?? key;
+    const translation = translationMap?.get(key);
+    if (translation) return translation;
+
+    console.warn('translation key missing:', key);
+    return key;
   };
 
   return {
