@@ -1,21 +1,28 @@
 {
-  "title": "Kontoeinstellungen",
-  "personalInfo": {
-    "legend": "Persönliche Daten",
-    "firstName": "Vorname",
-    "lastName": "Nachname"
-  },
-  "contact": {
-    "legend": "Kontakt",
-    "email": "Email",
-    "phone": "Telefon"
-  },
-  "address": {
-    "legend": "Addresse",
-    "street": "Straße",
-    "city": "Ort",
-    "zip": "Plz"
-  },
+  "userInfo": "Nutzer Informationen",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Telefon",
   "submit": "Änderungen speichern",
-  "cancel": "Abbrechen"
+  "cancel": "Abbrechen",
+  "errors": {
+    "name": "Name ist erforderlich",
+    "email": {
+      "required": "Email ist erforderlich",
+      "pattern": "Email muss gültig sein"
+    },
+    "phone": {
+      "required": "Email ist erforderlich",
+      "pattern": "Email muss gültig sein"
+    }
+  },
+  "fullUserInfo": "${name}, E-Mail: ${email},  Telefon: ${phone}",
+  "yes": "Ja",
+  "no": "Nein",
+  "enforceLanguage": "Vordefinierter Sprache: ",
+  "customTranslations": "Benutzerdefinierte Übersetzungen: ",
+  "formWithDefaultSettings": "Formular mit Standard Einstellungen",
+  "formWithEnforcedLanguage": "Formular mit vordefinierter Sprache",
+  "formWithCustomTranslations": "Formular mit benutzerdefinierten Übersetzungen",
+  "formWithEnforcedLanguageAndCustomTranslations": "Formular mit vordefinierter Sprache und benutzerdefinierten Übersetzungen"
 }

@@ -1,21 +1,28 @@
 {
-  "title": "Account Settings",
-  "personalInfo": {
-    "legend": "Personal information",
-    "firstName": "First name",
-    "lastName": "Last name"
-  },
-  "contact": {
-    "legend": "Contact information",
-    "email": "Email",
-    "phone": "Phone number"
-  },
-  "address": {
-    "legend": "Address",
-    "street": "Street address",
-    "city": "City",
-    "zip": "Postal code"
-  },
+  "userInfo": "User Information",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone",
   "submit": "Save changes",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "errors": {
+    "name": "Name is required",
+    "email": {
+      "required": "Email is required",
+      "pattern": "Email must be a valid email format"
+    },
+    "phone": {
+      "required": "Phone is required",
+      "pattern": "Phone number must be valid"
+    }
+  },
+  "fullUserInfo": "${name}, email: ${email}, phone: ${phone}",
+  "yes": "Yes",
+  "no": "No",
+  "enforceLanguage": "Enforce language: ",
+  "customTranslations": "Custom user translations: ",
+  "formWithDefaultSettings": "Form with default settings",
+  "formWithEnforcedLanguage": "Form with enforced language",
+  "formWithCustomTranslations": "Form with custom translations",
+  "formWithEnforcedLanguageAndCustomTranslations": "Form with enforced language and custom translations"
 }

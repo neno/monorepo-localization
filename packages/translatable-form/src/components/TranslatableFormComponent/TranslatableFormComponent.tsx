@@ -1,80 +1,91 @@
 import { useForm } from 'react-hook-form';
+import { DevTool } from '@hookform/devtools';
 import { TranslatableFormData } from './TranslatableFormComponent.types';
 import { useTranslation } from 'localization';
 
 export function TranslatableFormComponent() {
   const { t } = useTranslation();
   const {
+    control,
     register,
-    setValue,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<TranslatableFormData>();
+
+  const onSubmit = (data: TranslatableFormData) => console.log(data);
+
   return (
-    <form>
-      <fieldset>
-        <legend>{t('personalInfo.legend')}</legend>
-        <ol>
-          <li>
-            <label>
-              <span>{t('personalInfo.firstName')}</span>
-              <input {...register('firstName')} />
-            </label>
-          </li>
-          <li>
-            <label>
-              <span>{t('personalInfo.lastName')}</span>
-              <input {...register('lastName')} />
-            </label>
-          </li>
-        </ol>
-      </fieldset>
-      <fieldset>
-        <legend>{t('contact.legend')}</legend>
-        <ol>
-          <li>
-            <label>
-              <span>{t('contact.email')}</span>
-              <input {...register('contact.email')} />
-            </label>
-          </li>
-          <li>
-            <label>
-              <span>{t('contact.phone')}</span>
-              <input {...register('contact.phone')} />
-            </label>
-          </li>
-        </ol>
-      </fieldset>
-      <fieldset>
-        <legend>{t('address.legend')}</legend>
-        <ol>
-          <li>
-            <label>
-              <span>{t('address.street')}</span>
-              <input {...register('address.street')} />
-            </label>
-          </li>
-          <li>
-            <label>
-              <span>{t('address.zip')}</span>
-              <input {...register('address.zip')} />
-            </label>
-          </li>
-          <li>
-            <label>
-              <span>{t('address.city')}</span>
-              <input {...register('address.city')} />
-            </label>
-          </li>
-        </ol>
-      </fieldset>
-      <div className='buttons'>
-        <button className='btn primary' type='submit'>
-          {t('submit')}
-        </button>
-        <button className='btn tertiary'>{t('cancel')}</button>
-      </div>
-    </form>
+    <>
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        <fieldset>
+          <legend>{t('userInfo')}</legend>
+          <ol>
+            <li>
+              <label>
+                <span>{t('name')}</span>
+                <input
+                  {...register('name', { required: true })}
+                  data-1p-ignore
+                />
+                {errors.name?.type === 'required' && (
+                  <p role='alert' className='error'>
+                    First name is required
+                  </p>
+                )}
+              </label>
+            </li>
+            <li>
+              <label>
+                <span>{t('email')}</span>
+                <input
+                  {...register('email', {
+                    required: true,
+                    pattern: /^\S+@\S+$/i,
+                  })}
+                  data-1p-ignore
+                />
+              </label>
+              {errors.email && (
+                <p role='alert' className='error'>
+                  {t(`errors.email.${errors.email.type}`)}
+                </p>
+              )}
+            </li>
+            <li>
+              <label>
+                <span>{t('phone')}</span>
+                <input
+                  {...register('phone', {
+                    required: true,
+                    pattern: /\(?\+\(?49\)?[ ()]?([- ()]?\d[- ()]?){10}/g,
+                  })}
+                  data-1p-ignore
+                />
+              </label>
+              {errors.phone && (
+                <p role='alert' className='error'>
+                  {t(`errors.phone.${errors.phone.type}`)}
+                </p>
+              )}
+            </li>
+          </ol>
+        </fieldset>
+        <p className='info'>
+          {isValid &&
+            t('fullUserInfo', {
+              name: control._formValues.name,
+              email: control._formValues.email,
+              phone: control._formValues.phone,
+            })}
+        </p>
+        <div className='buttons'>
+          <button className='btn primary' type='submit'>
+            {t('submit')}
+          </button>
+          <button className='btn tertiary'>{t('cancel')}</button>
+        </div>
+      </form>
+      <DevTool control={control} /> {/* set up the dev tool */}
+    </>
   );
 }
