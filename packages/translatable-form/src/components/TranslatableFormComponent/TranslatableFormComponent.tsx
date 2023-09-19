@@ -3,7 +3,7 @@ import { DevTool } from '@hookform/devtools';
 import { TranslatableFormData } from './TranslatableFormComponent.types';
 import { useTranslation } from 'localization';
 
-import './TranslatableFormComponent.css';
+import styles from './TranslatableFormComponent.module.css';
 
 export function TranslatableFormComponent() {
   const { t } = useTranslation();

@@ -3,7 +3,7 @@ import { TranslatableFormComponent } from '../TranslatableFormComponent/Translat
 import { TranslatableFormProps } from './TranslatableForm.types';
 import { translatableFormDefaultSettings } from './TranslatableForm.settings';
 
-import './TranslatableForm.css';
+import styles from './TranslatableForm.module.css';
 
 const getFormTitle = (
   hasEnforcedLang: boolean,

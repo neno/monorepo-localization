@@ -2,19 +2,20 @@
   box-sizing: border-box;
 }
 
-.translatable-form-component {
+.translatableFormComponent {
+  background-color: #ff6464;
   text-align: left;
   width: 100%;
   position: relative;
 }
 
-.translatable-form-component fieldset {
+.translatableFormComponent fieldset {
   padding: 1rem 1rem 2rem;
   margin: 0;
   background-color: #1a1a1a;
 }
 
-.translatable-form-component ol.nolist {
+.translatableFormComponent ol.nolist {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -22,29 +23,29 @@
   width: 100%;
 }
 
-.translatable-form-component ol li {
+.translatableFormComponent ol li {
   margin: 0.5rem 0;
 }
 
-.translatable-form-component label {
+.translatableFormComponent label {
   display: block;
   width: 100%;
 }
 
-.translatable-form-component input {
+.translatableFormComponent input {
   display: inline-block;
   width: 100%;
   padding: 0.25rem 0.5rem;
 }
 
-.translatable-form-component .error {
+.translatableFormComponent .error {
   color: #ff6464;
   font-size: 0.75rem;
   margin-top: 0.25rem;
   display: block;
 }
 
-.translatable-form-component .info {
+.translatableFormComponent .info {
   /* color: #888; */
   font-size: 0.75rem;
   margin-top: 0.25rem;
@@ -54,12 +55,12 @@
   padding: 0.5rem 0.25rem;
 }
 
-.translatable-form-component label span {
+.translatableFormComponent label span {
   display: block;
   margin: 0.25rem 0;
 }
 
-.translatable-form-component button {
+.translatableFormComponent button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -70,11 +71,11 @@
   cursor: pointer;
   transition: border-color 0.25s;
 }
-.translatable-form-component button:hover {
+.translatableFormComponent button:hover {
   border-color: #646cff;
 }
-.translatable-form-component button:focus,
-.translatable-form-component button:focus-visible {
+.translatableFormComponent button:focus,
+.translatableFormComponent button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 

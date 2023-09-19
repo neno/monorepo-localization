@@ -11,8 +11,7 @@
   "dependencies": {
     "translatable-form": "workspace:^",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reactstore": "workspace:^"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

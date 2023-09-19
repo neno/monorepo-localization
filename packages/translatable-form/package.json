@@ -22,7 +22,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.1",
-    "reactstore": "workspace:^",
     "vite-plugin-dts": "^2.3.0"
   },
   "devDependencies": {
