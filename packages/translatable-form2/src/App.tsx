@@ -1,27 +1,26 @@
-import { TranslatableForm } from 'translatable-form';
-import { TranslatableForm2 } from 'translatable-form2';
 import './App.css';
+import { TranslatableForm2 } from './components/TranslatableForm2/TranslatableForm2';
 
 function App() {
   return (
     <div className='App'>
       <h1>App Translatable Form</h1>
-      <div className='grid'>
-        <TranslatableForm />
+      <div className='card'>
+        <TranslatableForm2 />
         <TranslatableForm2 enforcedLang='de' />
-        {/* <TranslatableForm
+        <TranslatableForm2
           customTranslations={{
             en: { name: 'Full name' },
             de: { name: 'Vor- und Nachname' },
           }}
-        /> */}
-        {/* <TranslatableForm
+        />
+        <TranslatableForm2
           enforcedLang='de'
           customTranslations={{
             en: { name: 'Full name' },
             de: { name: 'Vor- und Nachname' },
           }}
-        /> */}
+        />
       </div>
     </div>
   );
