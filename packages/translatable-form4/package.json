@@ -1,12 +1,12 @@
 {
-  "name": "translatable-form3",
+  "name": "translatable-form4",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/translatable-form3.es.js"
+      "import": "./dist/translatable-form4.es.js"
     }
   },
   "files": [

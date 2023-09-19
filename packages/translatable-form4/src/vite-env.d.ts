@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
@@ -17,9 +18,9 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'translatable-form3',
+      name: 'tranlsatable-form',
       formats: ['es'],
-      fileName: (format) => `translatable-form3.${format}.js`
+      fileName: (format) => `tranlsatable-form.${format}.js`
     },
     commonjsOptions: {
       transformMixedEsModules: true,

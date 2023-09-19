@@ -1,2 +1,3 @@
-export * from './components/TranslatableForm2/TranslatableForm2';
-export type { TranslatableFormProps2 as TranslatableFormProps } from './components/TranslatableForm2/TranslatableForm2.types';
+import { TranslatableForm as TranslatableForm3, TranslatableFormProps as TranslatableForm3Props } from 'translatable-form';
+export { TranslatableForm3 };
+export type { TranslatableForm3Props };

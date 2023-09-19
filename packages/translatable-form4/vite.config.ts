@@ -17,9 +17,9 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'translatable-form3',
+      name: 'translatable-form4',
       formats: ['es'],
-      fileName: (format) => `translatable-form3.${format}.js`
+      fileName: (format) => `translatable-form4.${format}.js`
     },
     commonjsOptions: {
       transformMixedEsModules: true,
