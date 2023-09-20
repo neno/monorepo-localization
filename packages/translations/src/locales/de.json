@@ -1,0 +1,17 @@
+{
+  "userInfo": "Nutzer Informationen",
+  "name": "Vollständiger Name",
+  "email": "E-Mail",
+  "phone": "Telefon",
+  "errors": {
+    "name": "Name ist erforderlich",
+    "email": {
+      "required": "Email ist erforderlich",
+      "pattern": "Email muss gültig sein"
+    },
+    "phone": {
+      "required": "Email ist erforderlich",
+      "pattern": "Email muss gültig sein"
+    }
+  }
+}

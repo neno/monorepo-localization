@@ -1,12 +1,12 @@
 {
-  "name": "translation",
+  "name": "translations",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/translation.es.js"
+      "import": "./dist/translations.es.js"
     }
   },
   "files": [
@@ -18,10 +18,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "json-to-ts": "^1.7.0",
+    "json-to-zod": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.1",
-    "vite-plugin-dts": "^2.3.0"
+    "vite-plugin-dts": "^2.3.0",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",

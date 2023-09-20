@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 import {
   TranslationsContextProps,
   TranslationsContextProviderProps,
-} from './TranslationsContext.types';
+} from './translations.types';
 
 const defaultContextProps: TranslationsContextProps = {
   currentLanguage: 'en',
@@ -21,12 +21,3 @@ export const TranslationsContextProvider: React.FC<
     </TranslationsContext.Provider>
   );
 };
-
-// const TranslationsContextProvider = ({
-//   children,
-//   ...rest
-// }: TranslationsContextProviderProps) => (
-//   <TranslationContext.Provider value={{ ...rest }}>
-//     {children}
-//   </TranslationContext.Provider>
-// );

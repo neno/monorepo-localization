@@ -7,12 +7,12 @@ import {
 import { MyTestComponent } from './components/MyTestComponent';
 
 function App() {
-  const lang = 'en';
-  const map = new Map();
-  map.set('greeting', 'Hello World!');
-  const lang2 = 'de';
-  const map2 = new Map();
-  map2.set('greeting', 'Guten Tag!');
+  // const lang = 'en';
+  // const map = new Map();
+  // map.set('greeting', 'Hello World!');
+  // const lang2 = 'de';
+  // const map2 = new Map();
+  // map2.set('greeting', 'Guten Tag!');
 
   return (
     <>
