@@ -31,7 +31,7 @@ export const translationsSchema = z.object({
 
 export type TranslationsType = z.infer<typeof translationsSchema>;
 
-export type TranslatableFormProps<T> = {
+export type CustomTranslationsProps<T> = {
   enforcedLanguage?: string;
   customTranslationsPerLanguage?: { [language: string]: Partial<T> };
 };
