@@ -1,5 +1,6 @@
 import './App.css';
 import { TranslatableForm } from './components/TranslatableForm/TranslatableForm';
+import de from './locales/de.json';
 
 function App() {
   return (
@@ -7,7 +8,11 @@ function App() {
       <h1>App Translatable Form</h1>
       <div className='card'>
         <TranslatableForm />
-        <TranslatableForm enforcedLang='de' />
+        <TranslatableForm
+          enforcedLanguage='de'
+          customTranslationsPerLanguage={{ de }}
+        />
+        {/* <TranslatableForm enforcedLang='de' />
         <TranslatableForm
           customTranslations={{
             en: { name: 'Full name' },
@@ -20,7 +25,7 @@ function App() {
             en: { name: 'Full name' },
             de: { name: 'Vor- und Nachname' },
           }}
-        />
+        /> */}
       </div>
     </div>
   );

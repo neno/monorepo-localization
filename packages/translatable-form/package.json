@@ -18,11 +18,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "localization": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.1",
-    "vite-plugin-dts": "^2.3.0"
+    "translations": "workspace:^",
+    "vite-plugin-dts": "^2.3.0",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",

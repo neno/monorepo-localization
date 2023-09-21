@@ -1,7 +1,7 @@
 {
   "userInfo": "Nutzer Informationen",
-  "name": "Name",
-  "email": "Email",
+  "name": "Vor- und Nachname",
+  "email": "E-Mail",
   "phone": "Telefon",
   "submit": "Änderungen speichern",
   "cancel": "Abbrechen",

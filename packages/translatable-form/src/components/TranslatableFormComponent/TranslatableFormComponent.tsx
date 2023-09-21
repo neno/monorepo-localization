@@ -1,12 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 import { TranslatableFormData } from './TranslatableFormComponent.types';
-import { useTranslation } from 'localization';
-
-import styles from './TranslatableFormComponent.module.css';
+import { useTranslations } from 'translations';
 
 export function TranslatableFormComponent() {
-  const { t } = useTranslation();
+  const { t } = useTranslations();
   const {
     control,
     register,

@@ -3,23 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/translations.es.js"
-    }
-  },
-  "files": [
-    "dist/**"
-  ],
+  "types": "./src/index.ts",
+  "main": "./src/index.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "dependencies": {
-    "json-to-ts": "^1.7.0",
-    "json-to-zod": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.1",

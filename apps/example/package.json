@@ -10,9 +10,6 @@
   },
   "dependencies": {
     "translatable-form": "workspace:^",
-    "translatable-form2": "workspace:^",
-    "translatable-form3": "workspace:^",
-    "translatable-form4": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

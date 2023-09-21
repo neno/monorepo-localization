@@ -1,32 +1,22 @@
 import { ReactNode } from 'react';
 import { z } from 'zod';
 
-export const TranslationSchema = z.object({
-  userInfo: z.string(),
-  name: z.string(),
-  email: z.string(),
-  phone: z.string(),
-  errors: z.object({
-    name: z.string(),
-    email: z.object({
-      required: z.string(),
-      pattern: z.string(),
-    }),
-    phone: z.object({
-      required: z.string(),
-      pattern: z.string(),
-    }),
-  }),
-});
+// export type TranslationsType = z.infer<typeof TranslationSchema>;
 
-export type TranslationsType = z.infer<typeof TranslationSchema>;
+// export type CustomTranslationTypeByLanguage = {
+//   [language: string]: Partial<TranslationsType>;
+// };
 
-export type CustomTranslationTypeByLanguage = {
-  [language: string]: Partial<TranslationsType>;
-};
+// export interface TranslationsProps {
+//   customTranslations?: CustomTranslationTypeByLanguage;
+//   enforcedLanguage?: string;
+// }
+export type CustomTranslationsPerLanguageType<T> = { [language: string]: Partial<T>; };
 
-export interface TranslationsProps {
-  customTranslations?: CustomTranslationTypeByLanguage;
+export type SetupTranslationsType<T extends object> = {
+  translations: T;
+  translationsSchema: z.ZodSchema<T>;
+  customTranslationsPerLanguage?: CustomTranslationsPerLanguageType<T>;
   enforcedLanguage?: string;
 }
 
@@ -35,11 +25,13 @@ export type GetCurrentLangProps = {
   availableCustomLanguages?: string[];
 }
 
-export interface CreateTranslationsProps extends TranslationsProps {
-  translations: TranslationsType;
-}
+// export interface CreateTranslationsProps extends TranslationsProps {
+//   translations: TranslationsType;
+// }
 
 export type TranslationsMapType = Map<string, string>;
+
+
 
 export interface TranslationsContextProps {
   translationsMap: TranslationsMapType;
